@@ -17,8 +17,8 @@
       <%= link_to "Sign Up", new_user_url %>
     <% end %>
 
-    <%= render 'layouts/errors' %>
-
     <%= yield %>
+
+    <%= flash[:errors] %>
   </body>
 </html>

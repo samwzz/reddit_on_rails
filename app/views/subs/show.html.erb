@@ -5,3 +5,10 @@ moderator: <%= @sub.moderator.username %>
 <br><br>
 <%= link_to "Edit Sub", edit_sub_url(@sub) %>
 <%= link_to "All Subs", subs_url %>
+<br><br>
+
+<ul>
+  <% @sub.posts.each do |post| %>
+    <li><%= link_to post.title, post %></li>
+  <% end %>
+</ul>

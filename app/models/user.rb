@@ -10,6 +10,8 @@ class User < ApplicationRecord
     foreign_key: :mod_id,
     class_name: :Sub
 
+  has_many :posts
+  
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return user if user && user.valid_password?(password)

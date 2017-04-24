@@ -1,8 +1,8 @@
 <h2>Edit sub</h2>
 
 <form action="<%= sub_url(@sub) %>" method="post">
-  <%= auth_token %>
   <input type="hidden" name="_method" value="patch">
+  <%= auth_token %>
   <label>
     Title
     <input type="text" name="sub[title]" value="<%= @sub.title %>">
